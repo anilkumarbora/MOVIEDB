@@ -1,0 +1,80 @@
+@import '../../app.css';
+
+.header {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    position: relative;
+}
+
+.logo>a {
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-h2);
+    color: var(--clr-sunset-orange);
+    margin: auto 0;
+    cursor: pointer;
+}
+
+.nav {
+    position: relative;
+}
+
+.nav__item {
+    margin: 0 0.5em;
+}
+
+.nav__list {
+    list-style: none;
+    display: flex;
+    height: 100%;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav__link {
+    color: var(--clr-light);
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-h3);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.nav__link:hover {
+    color: var(--clr-sunset-orange);
+}
+
+.nav__link::after {
+    background: var(--clr-sunset-orange);
+    content: '';
+    display: block;
+    height: 3px;
+    width: 0%;
+    opacity: .7;
+    transition: width 500ms ease-in-out;
+}
+
+.nav__link:hover::after {
+    width: 100%;
+}
+
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav {
+        background: var(--clr-light);
+        margin-top: 1em;
+    }
+
+    .nav__link {
+        color: var(--clr-dark);
+    }
+}

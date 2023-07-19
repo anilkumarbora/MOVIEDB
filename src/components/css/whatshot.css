@@ -1,0 +1,59 @@
+@import "../../app.css";
+
+.movies-container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem;
+}
+
+.container-header {
+    text-align: center;
+}
+
+.movies-container__title {
+    font-family: var(--ff-secondary);
+    display: inline-block;
+    font-size: var(--fs-h3);
+    color: var(--clr-sunset-orange);
+}
+
+.movies-container__title::after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 100%;
+    margin-top: .25em;
+    margin-bottom: 1em;
+    background: var(--clr-sunset-orange);
+    opacity: .5;
+}
+
+.movie-card {
+    text-align: center;
+    background: var(--clr-dark);
+    color: var(--clr-light);
+    padding: 0.5em;
+    margin: 1em;
+    max-width: 250px;
+    box-shadow: var(--bs);
+}
+
+.movie-poster {
+    width: 100%;
+}
+
+.movie-rating {
+    font-weight: var(--fw-bold);
+}
+
+.movie-title {
+    font-size: var(--fs-body);
+}
+
+.movie-list {
+    justify-items: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 0.4rem;
+}
